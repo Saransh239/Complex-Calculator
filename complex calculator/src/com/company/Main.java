@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         String s1 = getInput("Enter first number :");
-        String s2 = getInput("Enter first number :");
+        String s2 = getInput("Enter second number :");
         String op = getInput("Enter + - * / ");
         double result = 0;
         try {
