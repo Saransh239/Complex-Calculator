@@ -7,21 +7,21 @@ public class Main {
 
         String s1 = getInput("Enter first number :");
         String s2 = getInput("Enter second number :");
-        String op = getInput("Enter + - * / ");
+        String s3 = getInput("Enter + - * / ");
         double result = 0;
         try {
-            switch (op) {
+            switch (s3) {
                 case "+":
-                    result = addValues(s1, s2);
+                    result = add(s1, s2);
                     break;
                 case "-":
-                    result = subValues(s1, s2);
+                    result = sub(s1, s2);
                     break;
                 case "*":
-                    result = mulValues(s1, s2);
+                    result = mul(s1, s2);
                     break;
                 case "/":
-                    result = divValues(s1, s2);
+                    result = div(s1, s2);
                     break;
                 default:
                     System.out.println(" Unrecognised Operation");
@@ -30,28 +30,28 @@ public class Main {
             }
             System.out.println("The result is :" + result);
         } catch (Exception e) {
-            System.out.println(" Number formatting exception " + e.getMessage());
+            System.out.println(" Formatting exception " + e.getMessage());
         }
     }
-        private static double addValues(String s1, String s2)
+        private static double add(String s1, String s2)
         {
             double d1 = Double.parseDouble(s1);
             double d2 = Double.parseDouble(s2);
             return d1+d2;
         }
-        private static double subValues( String s1, String s2)
+        private static double sub( String s1, String s2)
         {
             double d1 = Double.parseDouble(s1);
             double d2 = Double.parseDouble(s2);
             return d1-d2;
         }
-        private static double mulValues( String s1, String s2)
+        private static double mul( String s1, String s2)
         {
             double d1 = Double.parseDouble(s1);
             double d2 = Double.parseDouble(s2);
             return d1*d2;
         }
-        private static double divValues( String s1, String s2)
+        private static double div( String s1, String s2)
         {
             double d1 = Double.parseDouble(s1);
             double d2 = Double.parseDouble(s2);
